@@ -4,7 +4,13 @@ class Utils
 {
     public static function getSvg(string $image_name): string
     {
-        return file_get_contents(get_template_directory() . "/assets/img/$image_name.svg");
+        $svg_file = get_template_directory() . "/assets/img/$image_name.svg";
+
+        if (! file_exists($svg_file)) {
+            return '';
+        }
+
+        return file_get_contents($svg_file);
     }
 
     public static function breadcrumbsContent(): string
