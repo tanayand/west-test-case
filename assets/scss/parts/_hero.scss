@@ -1,0 +1,111 @@
+.front-page-hero {
+    margin-bottom: 80px;
+
+    .featured-post {
+        .post-info {
+            margin-bottom: 20px;
+        }
+
+        .post-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+
+            .post-tag {
+                display: inline-block;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.3px;
+                color: #fff;
+                background-color: $third_color;
+                padding: 6px 10px;
+            }
+        }
+
+        .post-title {
+            margin: 20px 0;
+            @include font-h4;
+        }
+        
+        .post-excerpt {
+            margin-bottom: 0;
+            max-width: 600px;
+        }
+
+        .hero-post-thumbnail {
+            position: relative;
+            display: inline-block;
+            padding: 15px 0 0 15px;
+
+            &:before {
+                content: '';
+                display: block;
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $secondary_color;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .front-page-hero {
+        .featured-post {
+            .post-title {
+                @include font-h3;
+            }
+
+            .hero-post-thumbnail {
+                padding: 25px 0 0 15px;
+
+                &:before {
+                    width: 95%;
+                    height: 95%;
+                    left: -15px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .front-page-hero {
+        max-width: 1370px;
+        margin-bottom: 120px;
+
+        .featured-post {
+            .post-title {
+                margin: 30px 0;
+                @include font-h2;
+            }
+
+            .post-excerpt {
+                font-size: 22px;
+                line-height: 28px;
+            }
+
+            .hero-post-thumbnail {
+                padding: 45px 0 0 65px;
+
+                &:before {
+                    width: 85%;
+                    height: 85%;
+                    left: -15px;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 730px;
+                    height: 100%;
+                    max-height: 500px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

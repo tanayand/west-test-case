@@ -1,0 +1,55 @@
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: $text_light_color;
+    padding: 10px;
+    background: #F7F7F7;
+    border: none;
+    border-bottom: 1px solid $text-color;
+
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-color: $primary_color;
+    }
+
+    &::placeholder {
+        color: $grey_color;
+    }
+}
+
+textarea {
+    padding: 12px 10px;
+}
+
+input[type="submit"] {
+    padding: 4px 28px 4px 28px;
+    font-family: $font_heading;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    background-color: $secondary_color;
+    border: 1px solid $secondary_color;
+    transition: background-color .3s, border-color .3s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $third_color;
+        border-color: $third_color;
+    }
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 0.8em;
+}

@@ -1,0 +1,61 @@
+.front-page-form {
+    margin-bottom: 70px;
+    padding: 45px 60px;
+    position: relative;
+
+    .wp-block-heading, p {
+        margin-bottom: 15px;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        position: relative;
+
+        > p {
+            margin: 0;
+        }
+
+        input[type="email"] {
+            background: rgba(255, 255, 255, .11);
+            border-color: #fff;
+            color: #fff;
+            width: 330px;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+
+        input[type="submit"] {
+            line-height: 44px;
+            height: 44px;
+            padding: 0 44px;
+            font-weight: 400;
+        }
+
+        .wpcf7-spinner {
+            position: absolute;
+        }
+    }
+}
+
+@media (max-width: 786px) {
+    .front-page-form {
+        padding: 45px 30px;
+
+        form {
+            flex-direction: column;
+
+            > p:first-of-type, .wpcf7-form-control-wrap {
+                width: 100%;
+            }
+
+            input[type="email"] {
+                width: 100%;
+            }
+        }
+    }
+}

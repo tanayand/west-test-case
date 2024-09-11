@@ -1,0 +1,25 @@
+/*!
+Theme Name: Wwwest
+Author: Tetitana S.
+Version: 1.0.0
+Requires PHP: 8.0
+Text Domain: west
+*/
+
+@import "general/vars";
+@import "general/mixins";
+@import "general/base";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "parts/hero";
+@import "parts/forms";
+@import "parts/front-page-form";
+@import "parts/breadcrumbs";
+@import "parts/header-parts/menu";
+@import "parts/header-parts/search";
+
+@import "loop/post-item";
+
+@import "shortcodes/latest-posts";

@@ -1,0 +1,27 @@
+.breadcrumbs {
+    margin-bottom: 50px;
+    padding-left: 116px;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $text_dark_color;
+    }
+
+    a {
+        color: $text_dark_color;
+        transition: color 0.3s;
+
+        &:hover {
+            text-decoration: none;
+            color: $secondary_color;
+        }
+    }
+}

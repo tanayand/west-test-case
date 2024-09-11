@@ -1,0 +1,128 @@
+.header-search-container {
+    &.active {
+        .search-icon {
+            background-color: $surface;
+
+            svg {
+                opacity: 0;
+            }
+
+            &:before,
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    .search-icon {
+        height: 77px;
+        padding: 24px 20px;
+        cursor: pointer;
+        transition: background-color .3s;
+        position: relative;
+
+        svg {
+            pointer-events: none;
+            padding: 3px 0;
+            height: 29px;
+            border-bottom: 2px solid transparent;
+            transition: opacity 0.3s, border-color 0.3s;
+        }
+
+        &:hover {
+            svg {
+                border-color: $secondary_color;
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 1.5px;
+            background-color: $text_dark_color;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        &:before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    .search-form-container {
+        position: absolute;
+        right: 15px;
+        bottom: 12px;
+        transform: translateY(100%);
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: $surface;
+        box-shadow: -4px 4px 4px 0 #60617029;
+        z-index: 100;
+
+        .search-form {
+            display: inline-block;
+            position: relative;
+
+            label {
+                margin: 0;
+            }
+
+            input[type="search"] {
+                width: 300px;
+                padding-right: 48px;
+                background-color: transparent;
+            }
+
+            input[type="submit"] {
+                height: 28px;
+                width: 28px;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                background-size: 80%;
+                background-position: center;
+                transition: opacity .3s;
+                position: absolute;
+                right: 14px;
+                bottom: 8px;
+                border: none;
+                padding: 0;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .header-search-container {
+        .search-form-container {
+            width: 100vw;
+            right: 0;
+            bottom: 0;
+            box-shadow: 0 4px 4px 0 #60617029;
+
+            .search-form {
+                width: 100%;
+
+                label,
+                input[type="search"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
