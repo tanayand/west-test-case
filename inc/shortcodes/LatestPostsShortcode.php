@@ -5,7 +5,7 @@ class LatestPostsShortcode extends Shortcode {
 
     public static function registerHooks(): void
     {
-        add_shortcode('west-latest-posts', [__CLASS__, 'shortcodeCallback']);
+        add_shortcode(self::$shortcode_tag, [__CLASS__, 'shortcodeCallback']);
     }
 
     public static function shortcodeCallback($atts = []): string
